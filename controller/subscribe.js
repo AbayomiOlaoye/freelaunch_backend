@@ -10,7 +10,6 @@ const subscribe = async (req, res) => {
     });
 
     await subscriber.save();
-    console.log('Subscriber created:', subscriber);
     res.status(201).json(subscriber);
   } catch (error) {
     console.error(error);
