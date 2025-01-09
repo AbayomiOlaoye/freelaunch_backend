@@ -1,0 +1,31 @@
+{
+  "name": "freelance-launchpad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "production": "NODE_ENV=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "joi": "^17.13.3",
+    "lodash": "^4.17.21",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "mongoose-autopopulate": "^1.1.0",
+    "nodejs-base64": "^2.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3"
+  }
+}
