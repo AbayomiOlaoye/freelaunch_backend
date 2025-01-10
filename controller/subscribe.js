@@ -4,13 +4,18 @@ const subscribe = async (req, res) => {
   try {
     const { email, name } = req.body;
 
+    const existingSubscriber = await Subscriber.findOne({ email });
+    if (existingSubscriber) {
+      return res.status(400).json({ error: 'Subscriber already exists' });
+    }
+
     const subscriber = new Subscriber({
       name,
       email,
     });
 
     await subscriber.save();
-    res.status(201).json(subscriber);
+    res.status(201).json({ message: 'Subscribed successfully' });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Error subscribing' });
